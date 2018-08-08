@@ -1,0 +1,15 @@
+{
+  "name": "react-native-jewish-calendar",
+  "version": "1.0.0",
+  "description": "jewish calendar for react native apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "jewish-calendar"
+  ],
+  "author": "Tzahi levi <thetzahilevi@gmail.com>",
+  "license": "ISC"
+}
