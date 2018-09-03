@@ -7,6 +7,11 @@
     "start": "npm run build && node dist/index.js",
     "build": "babel src --out-dir dist"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://tltk90@bitbucket.org/tltk90/react-native-jewish-calendar.git"
+  },
+  "homepage": "https://bitbucket.org/tltk90/react-native-jewish-calendar",
   "keywords": [
     "react-native",
     "jewish-calendar"
