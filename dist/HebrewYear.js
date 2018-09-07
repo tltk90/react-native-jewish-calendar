@@ -46,7 +46,7 @@ var HebrewYear = function HebrewYear(date) {
         var w = 0;
         for (var i = 1; i < 23; i++) {
             var p = getParashaBeforeBershit(i);
-            a.push(new HebrewDay(day, i, 1, year, p, leap));
+            a.push(new HebrewDay(day, i, 1, year, p, leap, 30));
             day.setDate(day.getDate() + 1);
         }
         MONTHES.forEach(function (month, m) {
@@ -55,7 +55,7 @@ var HebrewYear = function HebrewYear(date) {
             var dayInMonth = Common.daysInMonth(month, leap, days);
             for (var _i = m == 1 ? 23 : 1; _i <= dayInMonth; _i++) {
                 var _p = getParasha(_i, month);
-                a.push(new HebrewDay(day, _i, m, year, _p, leap));
+                a.push(new HebrewDay(day, _i, m, year, _p, leap, dayInMonth));
                 day.setDate(day.getDate() + 1);
             }
         });
@@ -130,7 +130,7 @@ var HebrewYear = function HebrewYear(date) {
 exports.default = HebrewYear;
 
 var HebrewDay = function () {
-    function HebrewDay(d, d1, m, y, p, l) {
+    function HebrewDay(d, d1, m, y, p, l, dim) {
         _classCallCheck(this, HebrewDay);
 
         this.year = y;
@@ -140,6 +140,10 @@ var HebrewDay = function () {
         this.parasha = p;
         this.leapYear = l;
         this.weekDay = this.day.getDay();
+        this.isFullMonth = function () {
+            //console.log('day in month' + dim)
+            return dim == 30;
+        };
     }
 
     _createClass(HebrewDay, [{

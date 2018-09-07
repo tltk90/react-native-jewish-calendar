@@ -28,7 +28,7 @@ export default class HebrewYear {
             let w = 0;
             for (let i = 1; i < 23; i++) {
                 let p = getParashaBeforeBershit(i)
-                a.push(new HebrewDay(day, i, 1, year, p,leap))
+                a.push(new HebrewDay(day, i, 1, year, p,leap, 30))
                 day.setDate(day.getDate() + 1)
             }
             MONTHES.forEach((month, m) => {
@@ -37,7 +37,7 @@ export default class HebrewYear {
                 let dayInMonth = Common.daysInMonth(month, leap, days)
                 for (let i = (m == 1 ? 23 : 1); i <= dayInMonth; i++) {
                     let p = getParasha(i, month)
-                    a.push(new HebrewDay(day, i, m, year, p, leap))
+                    a.push(new HebrewDay(day, i, m, year, p, leap, dayInMonth))
                     day.setDate(day.getDate() + 1)
                 }
             })
@@ -115,7 +115,7 @@ export default class HebrewYear {
 
 
 class HebrewDay {
-    constructor(d, d1, m, y, p, l) {
+    constructor(d, d1, m, y, p, l, dim) {
         this.year = y;
         this.day = new Date(d)
         this.hebDay = d1;
@@ -123,6 +123,10 @@ class HebrewDay {
         this.parasha = p;
         this.leapYear = l;
         this.weekDay = this.day.getDay() ;
+        this.isFullMonth = () => {
+            //console.log('day in month' + dim)
+            return dim == 30;
+        }
     }
 
     toString() {
