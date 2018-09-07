@@ -1,6 +1,6 @@
 {
   "name": "react-native-jewish-calendar",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "jewish calendar for react native apps",
   "main": "dist/index.js",
   "scripts": {
