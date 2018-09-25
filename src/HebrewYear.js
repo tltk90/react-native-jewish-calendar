@@ -26,7 +26,16 @@ export default class HebrewYear {
             let day = new Date(_rosh)
             let a = [];
             let w = 0;
-            for (let i = 1; i < 23; i++) {
+            MONTHES.forEach( (month, m) => {
+                if(m == 0 || (month == MONTHES[7] && !leap)) return
+                let dayInMonth = Common.daysInMonth(month, leap, days)
+                for( let i = 1; i<= dayInMonth; i++){
+                    let p = getParasha(i, month)
+                    a.push(new HebrewDay(day, i, m, year, p, leap, dayInMonth ))
+                    day.setDate(day.getDate() + 1)
+                }
+            })
+            /* for (let i = 1; i < 23; i++) {
                 let p = getParashaBeforeBershit(i)
                 a.push(new HebrewDay(day, i, 1, year, p,leap, 30))
                 day.setDate(day.getDate() + 1)
@@ -40,13 +49,12 @@ export default class HebrewYear {
                     a.push(new HebrewDay(day, i, m, year, p, leap, dayInMonth))
                     day.setDate(day.getDate() + 1)
                 }
-            })
+            }) */
 
             return a;
 
-
-
             function getParasha(i, m) {
+                if(m == MONTHES[1] && i < 23) return getParashaBeforeBershit(i)
                 if (m == MONTHES[8]) {
                     switch (type[2]) {
                         case 'א': {
