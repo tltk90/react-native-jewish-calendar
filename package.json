@@ -23,7 +23,7 @@
     ]
   },
   "author": "Tzahi levi <thetzahilevi@gmail.com>",
-  "license": "ISC",
+  "license": "NONE",
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0"
