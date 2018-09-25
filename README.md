@@ -8,5 +8,5 @@
 <p><code>let d = new Date()</code></p>
 <p><code>let hebdate = getHebDate(d)</code></p>
 </div>
-</body>
+</body>no
 </html>
