@@ -2,7 +2,6 @@
 
 # 
 
-<div>
 
 `import {getHebDate} from 'react-native-jewish-calendar';`
 
@@ -12,4 +11,3 @@
 
 `let hebdate = getHebDate(d)`
 
-</div>
