@@ -1,12 +1,15 @@
-<html>
-<head></head>
-<body>
-<h1> simple use <h1>
+# simple use
+
+# 
+
 <div>
-<p><code>import {getHebDate} from 'react-native-jewish-calendar';</code></p>
-<p><code>// the rest of your code</code></p>
-<p><code>let d = new Date()</code></p>
-<p><code>let hebdate = getHebDate(d)</code></p>
+
+`import {getHebDate} from 'react-native-jewish-calendar';`
+
+`// the rest of your code`
+
+`let d = new Date()`
+
+`let hebdate = getHebDate(d)`
+
 </div>
-</body>no
-</html>
