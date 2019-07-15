@@ -70,6 +70,6 @@ const PARASHOT = {
 'במדבר','נשא','בהעלותך','שלח','קרח','חקת','בלק','פנחס','מטות','מסעי',
 'דברים','ואתחנן','עקב','ראה','שופטים','כי תצא','כי תבוא','נצבים-וילך','האזינו','וזאת הברכה']      
 }
-export default function(type, weeksFromHoshanaRaba){
+export default function(type: string, weeksFromHoshanaRaba: number){
     return PARASHOT[type][weeksFromHoshanaRaba]
 }

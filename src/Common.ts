@@ -79,10 +79,10 @@ export function getYearType(year) {
  * @param {number} year hebrew year to find her length
  */
 export function daysInYear(year){
-    let rosh = dayOfRoshHashana(year - YEARBETWEENGEROGIANTOJEWISH)
-    let nextYear = dayOfRoshHashana(year - YEARBETWEENGEROGIANTOJEWISH + 1)
+    let rosh = dayOfRoshHashana(year - YEARBETWEENGEROGIANTOJEWISH);
+    let nextYear = dayOfRoshHashana(year - YEARBETWEENGEROGIANTOJEWISH + 1);
 
-    return (nextYear - rosh) / MILISECONDINDAY;
+    return (nextYear.getTime() - rosh.getTime()) / MILISECONDINDAY;
 }
 
 
