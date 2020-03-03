@@ -21,7 +21,7 @@
   "license": "NONE",
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "^12.6.2",
-    "typescript": "^3.5.3"
+    "@types/node": "^13.7.7",
+    "typescript": "^3.8.3"
   }
 }
