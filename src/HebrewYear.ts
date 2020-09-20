@@ -57,7 +57,12 @@ export default class HebrewYear {
             return a;
 
             function getParasha(d: number, m: string) {
-                if(m == MONTHES[1] && d < 23) return getParashaBeforeBershit(d);
+                if(m == MONTHES[1]) {
+                    if(d < 23) return getParashaBeforeBershit(d);
+                    else if(roshHashhanaDay === 6 && d < 29) {
+                        return 'בראשית'
+                    }
+                }
                 if (m == MONTHES[8]) {
                     switch (type[2]) {
                         case 'א': {
@@ -114,7 +119,7 @@ export default class HebrewYear {
                     case 6: {
                         if (d == 1) return 'ראש השנה';
                         else if (d >= 2 && d <= 8) return 'האזינו';
-                        else if (d >= 9 && d <= 15) return 'סוכות';
+                        else if (d >= 9 && d <= 22) return 'סוכות';
                         else return 'בראשית';
                     }
                     default: return '';
