@@ -18,7 +18,7 @@
     "jewish-calendar"
   ],
   "author": "Tzahi levi <thetzahilevi@gmail.com>",
-  "license": "NONE",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "@types/node": "^13.7.7",
