@@ -35,6 +35,15 @@ export enum DAYS_WEEK {
 }
 
 export type WEEK_DAY_LETTER = 'א' | 'ב' | 'ג' | 'ד' | 'ה' | 'ו' | 'ז'
+
+export const MONTHES: Array<'' | YEAR_MONTHS> = ['', YEAR_MONTHS.TESHRI, YEAR_MONTHS.HESVAN, YEAR_MONTHS.KESLEV,
+    YEAR_MONTHS.TEVET, YEAR_MONTHS.SHVAT, YEAR_MONTHS.ADAR, YEAR_MONTHS.ADARB,
+    YEAR_MONTHS.NISAN, YEAR_MONTHS.IAR, YEAR_MONTHS.SIVAN, YEAR_MONTHS.TAMUZ,
+    YEAR_MONTHS.AV, YEAR_MONTHS.ELOL];
+
+export const WEEKDAY = [DAYS_WEEK.RESON, DAYS_WEEK.SHENI, DAYS_WEEK.SHLISHI,
+    DAYS_WEEK.REVEI, DAYS_WEEK.HAMESHI, DAYS_WEEK.SHISHI, DAYS_WEEK.SHABAT];
+
 /**
  * find the day in September that Rosh Hashana occour.
  * @param {number} year a georigian year

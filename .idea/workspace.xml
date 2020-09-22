@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1702f9e-dd32-4d02-82b6-d55947d06a77" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/spec/HebDate.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/HebrewYear.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.npmignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HebrewDay.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HebrewYear.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/HebrewYear.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +17,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -70,7 +69,7 @@
       <updated>1563173940495</updated>
       <workItem from="1563173941584" duration="586000" />
       <workItem from="1563182405085" duration="3311000" />
-      <workItem from="1600630171943" duration="17205000" />
+      <workItem from="1600630171943" duration="19948000" />
     </task>
     <servers />
   </component>
@@ -90,5 +89,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600686342760" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600763382799">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600763382799" />
   </component>
 </project>
