@@ -13,7 +13,7 @@ import parshatShavoa from './ParashatShavoa'
 
 
 export interface IHebDay {
-    year: HebrewYear;
+    year: number;
     day: Date;
     hebDay: number;
     hebMonth: number;
@@ -102,41 +102,42 @@ export default class HebrewYear {
 
 class HebrewDay implements IHebDay{
     day: Date;
-    year: HebrewYear;
+    year: number;
     hebDay: number;
     hebMonth: number;
     parasha: string;
     weekDay: number;
-
+    _isFullMonth: boolean;
     constructor(date, day, month, y) {
-        this.year = y;
+        this.year = y.hebYear;
         this.day = new Date(date);
         this.hebDay = day;
         this.hebMonth = month;
         this.weekDay = this.day.getDay() ;
-        this.parasha = this.getParasha();
+        this.parasha = this.getParasha(y);
+        this._isFullMonth = y.checkIfMonthIsFull(this.hebMonth);
     }
 
     /**
      * @deprecated use checkIfMonthIsFull from the year instance
      */
     isFullMonth() {
-        return this.year.checkIfMonthIsFull(this.hebMonth);
+        return this._isFullMonth;
     }
     toString(): string {
-        return `יום ${WEEKDAY[this.weekDay]}, ${gimatria(this.hebDay)} ב${MONTHES[this.hebMonth]} ${gimatria(this.year.hebYear)}`;
+        return `יום ${WEEKDAY[this.weekDay]}, ${gimatria(this.hebDay)} ב${MONTHES[this.hebMonth]} ${gimatria(this.year)}`;
     }
 
-    private getParasha() {
+    private getParasha(HebYear) {
         const month = MONTHES[this.hebMonth];
         if(month === YEAR_MONTHS.TESHRI) {
-            if(this.hebDay < 23) return this.getParashaBeforeBershit();
-            else if(this.year.rosh.getDay() === 6 && this.hebDay < 29) {
+            if(this.hebDay < 23) return this.getParashaBeforeBershit(HebYear);
+            else if(HebYear.rosh.getDay() === 6 && this.hebDay < 29) {
                 return 'בראשית'
             }
         }
         if (month === YEAR_MONTHS.NISAN) {
-            switch (this.year.getPesahDay()) {
+            switch (HebYear.getPesahDay()) {
                 case 'א': {
                     if (this.hebDay >= 15 && this.hebDay <= 21) return 'פסח';
                     break;
@@ -154,22 +155,22 @@ class HebrewDay implements IHebDay{
                     break;
                 }
                 default: {
-                    if (this.day.getDay() == 0) { this.year.weeksWithParash++; }
-                    return parshatShavoa(this.year.type.toString(), this.year.weeksWithParash);
+                    if (this.day.getDay() == 0) { HebYear.weeksWithParash++; }
+                    return parshatShavoa(HebYear.type.toString(), HebYear.weeksWithParash);
                 }
             }
         }
-        if(this.year.getRoshHashanaDay() === 'ז' && (month == MONTHES[13] && this.hebDay >= 24)) return 'ראש השנה';
-        if (this.day.getDay() == 0) { this.year.weeksWithParash++; }
-        return parshatShavoa(this.year.type.toString(), this.year.weeksWithParash)
+        if(HebYear.getRoshHashanaDay() === 'ז' && (month == MONTHES[13] && this.hebDay >= 24)) return 'ראש השנה';
+        if (this.day.getDay() == 0) { HebYear.weeksWithParash++; }
+        return parshatShavoa(HebYear.type.toString(), HebYear.weeksWithParash)
 
     }
 
     /**
      * get parasha from rosh hashana to simhat tora
      */
-    private getParashaBeforeBershit(): string {
-        switch (this.year.getRoshHashanaDay()) {
+    private getParashaBeforeBershit(HebYear): string {
+        switch (HebYear.getRoshHashanaDay()) {
             case 'ב': {
                 if (this.hebDay >= 1 && this.hebDay <= 6) return 'וילך';
                 else if (this.hebDay >= 7 && this.hebDay <= 13) return 'האזינו';

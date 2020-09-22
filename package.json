@@ -4,9 +4,10 @@
   "description": "jewish calendar for react native apps",
   "main": "dist/index.js",
   "scripts": {
-    "start": "npm run build && node dist/index.js",
+    "start": "npm run build",
     "build": "tsc",
-    "deploy": "npm publish"
+    "deploy": "npm publish",
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   "dependencies": {},
   "devDependencies": {
     "@types/node": "^13.7.7",
+    "jasmine": "^3.6.1",
     "typescript": "^3.8.3"
   }
 }
