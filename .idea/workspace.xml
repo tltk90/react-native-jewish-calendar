@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1702f9e-dd32-4d02-82b6-d55947d06a77" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HebrewDay.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Common.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HebrewDay.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/HebrewDay.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HebrewYear.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/HebrewYear.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +45,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AnsynIo/ansyn-storage-service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dist" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -56,6 +55,21 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Users\Tzahi\Projects\react-native-jewish-calendar\node_modules\typescript\lib" />
+  </component>
+  <component name="RunManager">
+    <configuration name="debug" type="NodeJSConfigurationType" path-to-js-file="index.js" working-dir="$PROJECT_DIR$/dist">
+      <method v="2">
+        <option name="NpmBeforeRunTask" enabled="true">
+          <package-json value="$PROJECT_DIR$/package.json" />
+          <command value="run" />
+          <scripts>
+            <script value="build" />
+          </scripts>
+          <node-interpreter value="project" />
+          <envs />
+        </option>
+      </method>
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -70,28 +84,125 @@
       <workItem from="1563173941584" duration="586000" />
       <workItem from="1563182405085" duration="3311000" />
       <workItem from="1600630171943" duration="19948000" />
+      <workItem from="1630655660540" duration="4279000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1600684101671">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1630656407246">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1600684101671" />
-    <state x="-5" y="39" width="1833" height="909" key="DiffContextDialog" timestamp="1600693683213">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1630656407246" />
+    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1630664969854">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="-5" y="39" width="1833" height="909" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600693683213" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1600686342760">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1630664969854" />
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1630656317143">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600686342760" />
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600763382799">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1630656317143" />
+    <state width="1259" height="274" key="GridCell.Tab.0.bottom" timestamp="1630664007389">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600763382799" />
+    <state width="1259" height="274" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1630664007389" />
+    <state width="1259" height="274" key="GridCell.Tab.0.center" timestamp="1630664007389">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="274" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1630664007389" />
+    <state width="1259" height="274" key="GridCell.Tab.0.left" timestamp="1630664007389">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="274" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1630664007389" />
+    <state width="1259" height="274" key="GridCell.Tab.0.right" timestamp="1630664007389">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="274" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1630664007389" />
+    <state width="1259" height="274" key="GridCell.Tab.1.bottom" timestamp="1630664007389">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="274" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1630664007389" />
+    <state width="1259" height="274" key="GridCell.Tab.1.center" timestamp="1630664007389">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="274" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1630664007389" />
+    <state width="1259" height="274" key="GridCell.Tab.1.left" timestamp="1630664007389">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="274" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1630664007389" />
+    <state width="1259" height="274" key="GridCell.Tab.1.right" timestamp="1630664007389">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="274" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1630664007389" />
+    <state width="1259" height="274" key="GridCell.Tab.2.bottom" timestamp="1630664007390">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="274" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1630664007390" />
+    <state width="1259" height="274" key="GridCell.Tab.2.center" timestamp="1630664007389">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="274" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1630664007389" />
+    <state width="1259" height="274" key="GridCell.Tab.2.left" timestamp="1630664007389">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="274" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1630664007389" />
+    <state width="1259" height="274" key="GridCell.Tab.2.right" timestamp="1630664007390">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="274" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1630664007390" />
+    <state width="1259" height="274" key="GridCell.Tab.3.bottom" timestamp="1630664007390">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="274" key="GridCell.Tab.3.bottom/0.0.1280.680@0.0.1280.680" timestamp="1630664007390" />
+    <state width="1259" height="274" key="GridCell.Tab.3.center" timestamp="1630664007390">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="274" key="GridCell.Tab.3.center/0.0.1280.680@0.0.1280.680" timestamp="1630664007390" />
+    <state width="1259" height="274" key="GridCell.Tab.3.left" timestamp="1630664007390">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="274" key="GridCell.Tab.3.left/0.0.1280.680@0.0.1280.680" timestamp="1630664007390" />
+    <state width="1259" height="274" key="GridCell.Tab.3.right" timestamp="1630664007390">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="274" key="GridCell.Tab.3.right/0.0.1280.680@0.0.1280.680" timestamp="1630664007390" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/index.ts</url>
+          <line>7</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <condition expression="m === 13 &amp;&amp; i === 24" language="TypeScript" />
+          <url>file://$PROJECT_DIR$/src/HebrewYear.ts</url>
+          <line>60</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/HebrewYear.ts</url>
+          <line>86</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

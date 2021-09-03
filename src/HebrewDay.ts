@@ -1,6 +1,6 @@
 import { gimatria, WEEKDAY, YEAR_MONTHS, MONTHES } from './Common';
 import parshatShavoa from './ParashatShavoa';
-import { IHebDay } from './HebrewYear';
+import HebrewYear, { IHebDay } from './HebrewYear';
 
 
 export class HebrewDay implements IHebDay{
@@ -11,7 +11,7 @@ export class HebrewDay implements IHebDay{
 	parasha: string;
 	weekDay: number;
 	isFullMonth: () => boolean;
-	constructor(date, day, month, y) {
+	constructor(date: Date, day: number, month: number, y: HebrewYear) {
 		const isFullMonth = y.checkIfMonthIsFull(month);
 		this.year = y.hebYear;
 		this.day = new Date(date);
@@ -62,7 +62,7 @@ export class HebrewDay implements IHebDay{
 				}
 			}
 		}
-		if(HebYear.getRoshHashanaDay() === 'ז' && (month == MONTHES[13] && this.hebDay >= 24)) return 'ראש השנה';
+		if(HebYear.getNextYearRoshHashana() === 'ז' && (month == MONTHES[13] && this.hebDay >= 24)) return 'ראש השנה';
 		if (this.day.getDay() == 0) { HebYear.weeksWithParash++; }
 		return parshatShavoa(HebYear.type.toString(), HebYear.weeksWithParash)
 

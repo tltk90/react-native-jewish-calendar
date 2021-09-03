@@ -6,7 +6,7 @@ import {
     YEAR_MONTHS,
     YEARBETWEENGEROGIANTOJEWISH,
     YearType,
-    MONTHES
+    MONTHES, gimatria
 } from './Common'
 import { HebrewDay } from './HebrewDay';
 
@@ -27,8 +27,14 @@ function findRoshHashana(d): Date {
     return r;
 }
 
+function findRoshHashanaForNextYear(d: Date): string {
+    const r = dayOfRoshHashana(d.getFullYear() + 1);
+    return gimatria(r.getDay() + 1);
+}
+
 export default class HebrewYear {
     rosh: Date;
+    nextRoshHashanaDay: string;
     hebYear: number;
     daysInYear: number;
     leap: boolean;
@@ -43,6 +49,7 @@ export default class HebrewYear {
 
     private createYear(date) {
         this.rosh = findRoshHashana(fixedDate(new Date(date)));
+        this.nextRoshHashanaDay = findRoshHashanaForNextYear(date);
         this.hebYear = this.rosh.getFullYear() + YEARBETWEENGEROGIANTOJEWISH;
         this.daysInYear = daysInYear(this.hebYear);
         this.leap = this.daysInYear > 380;
@@ -56,7 +63,7 @@ export default class HebrewYear {
             let _daysInMonth = daysInMonth(month, this.leap, this.daysInYear);
             for( let i = 1; i <= _daysInMonth; i++) {
                 const hebDay = new HebrewDay(day, i, m, this);
-                this.days.set(day.toDateString(), hebDay);
+                this.days.set(day.toLocaleDateString(), hebDay);
                 day.setDate(day.getDate() + 1);
             }
         }
@@ -66,10 +73,10 @@ export default class HebrewYear {
         if(typeof date === 'string') {
             date = new Date(date);
         }
-        if(!this.days.has(date.toDateString())) {
+        if(!this.days.has(date.toLocaleDateString())) {
             this.createYear(date);
         }
-        return this.days.get(date.toDateString());
+        return this.days.get(date.toLocaleDateString());
     }
 
     getPesahDay() {
@@ -78,6 +85,10 @@ export default class HebrewYear {
 
     getRoshHashanaDay() {
         return this.type.getRoshHashanaDayInWeek();
+    }
+
+    getNextYearRoshHashana() {
+        return this.nextRoshHashanaDay;
     }
 
     getYearLength() {
